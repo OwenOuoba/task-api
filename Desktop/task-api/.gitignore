@@ -1,6 +1,34 @@
+# Crée/modifie .gitignore
+cat > .gitignore << EOF
+# Environnement virtuel
 venv/
+env/
+
+# Python
 __pycache__/
-*.__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Base de données
 *.db
+*.sqlite3
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Environnement
 .env
+
+# Tests
+.pytest_cache/
+.coverage
+htmlcov/
+
+# OS
 .DS_Store
+Thumbs.db
+EOF
